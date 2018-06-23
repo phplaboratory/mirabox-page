@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onepage</title>
+
+    <script  src="bower_components/bitcore-wallet-client/bitcore-wallet-client.min.js"></script>
+</head>
+<body>
+<script>
+
+    var Client = require('bitcore-wallet-client');
+    var BWS_INSTANCE_URL = 'https://bws.bitpay.com/bws/api';
+    var client =  new Client ({
+        baseUrl: BWS_INSTANCE_URL,
+        verbose: true
+    });
+
+
+    client.
+    client.createWallet("My Wallet", "Irene", 2, 2, {network: 'testnet'}, function(err, secret) {
+        if (err) {
+            console.log('error: ',err);
+            return
+        };
+        // Handle err
+        console.log('Wallet Created. Share this secret with your copayers: ' + secret);
+
+    });
+</script>
+
+<table>
+    <tr>
+        <th>Action</th><th>&nbsp;</th>
+    </tr>
+    <tr>
+        <td>New account</td><td></td>
+    </tr>
+    <tr>
+        <td>Get test coins</td><td></td>
+    </tr>
+    <tr>
+        <td>Create mirabox template</td><td></td>
+    </tr>
+    <tr>
+        <td>Deploy mirabox contract</td><td></td>
+    </tr>
+    <tr>
+        <td>Encrypt mirabox</td><td></td>
+    </tr>
+    <tr>
+        <td>Download it</td><td></td>
+    </tr>
+</table>
+
+</body>
+</html>
